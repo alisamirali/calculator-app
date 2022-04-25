@@ -1,5 +1,17 @@
+@import url('http://fonts.cdnfonts.com/css/gotham-rounded');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Gotham Rounded', sans-serif;
+  font-weight: 300;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #56CCF2, #2F80ED);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +22,14 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    width: 380px !important;
+    margin: 120px auto !important;
+    grid-template-columns: repeat(4, 95px) !important;
+    grid-template-rows: minmax(120px, auto) repeat(5, 70px) !important;
+
+  }
 }
